@@ -12,54 +12,51 @@
 <body>
 
 <div class="container">
-  <h2> Contas</h2>
-  <!--<p>Tabela de contas</p>  -->          
-  <table class="table table-dark">
+  <h2>CONTAS</h2>
+  <p></p>            
+  <table class="table table-dark table-striped">
     <thead>
       <tr>
         <th>ID</th>
         <th>Cliente</th>
         <th>Saldo</th>
-        <th>Transferir</th>
+        <th>Transeferir</th>
+        <th>Apagar</th>
+        <th>Editar</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      
     </tbody>
- 
+  
+
+
 <?php
+	try{
+		$conexao = new PDO('mysql:host=localhost;dbname=pdo', "root", "");
 
+		$sql = "SELECT id, nome, saldo FROM contas ORDER BY id ASC";
 
+		foreach($conexao->query($sql) as $row){
+            echo "<thead>";
+			echo "<tr>";
+			echo "<th>".$row["id"]."</th>";
+			echo "<th>".$row["nome"]."</th>";
+			echo "<th>".$row["saldo"]."</th>";
+			echo "<th><a href='transeferir.php?id=".$row["id"]."'>Transferir Valor</th>";
+			echo "<th><a href='apagar-conta.php?id=".$row["id"]."'>X</th>";
+			echo "<th><a href='editar-conta.php?id=".$row["id"]."'>OK</th>";
+			echo "</tr>";
+            echo "</thead>";
+		}
 
-try {
-    $conexao = new PDO('mysql:host=localhost;dbname=pdo', "root", "");
-     $sql = "SELECT * FROM contas ORDER BY id ASC";
-    foreach ($conexao->query($sql) as $row) {
-        echo "<thead>";
-        echo "<tr>";
-        echo "<tbody>";
-        echo "<td>".$row["id"]."</td>";
-        echo "<td>".$row["nome"]."</td>";
-        echo "<td>".$row["saldo"]."</td>";
-        echo "<td><a href='transeferir.php'>Transferir Valor</td>";
-        echo "</tr>";
-        echo "</thead>";
-        echo "</tbody>";
-        
-        
-    }
-} catch (PDOException $e) {
-   echo "An error has occurred:". $e->getMessage() . "<br/>";
-}
-
+	} catch (PDOException $e){
+		echo "Ocorreu um erro: ".$e->getMessage();	
+	}
 ?>
- </table>
+
+
+</table>
+<a href="nova-conta.php">Cadastrar</a>
 </div>
 
 </body>
