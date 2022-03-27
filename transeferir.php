@@ -10,7 +10,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-<form>
+<form action ="transferir-ok.php" method ="POST">
 <div class="container">
   <h2> Transeferir</h2>
   <!--<p>Tabela de contas</p>  -->          
@@ -19,6 +19,7 @@
       <tr>
         <th width="20%">ID Remetente:</th>
         <th><input type="text" value="<?php echo $_GET["id"]?>" name="txtIDR"></th>
+        
       </tr>
       <tr>
         <th width="20%">ID Destinatario:</th>

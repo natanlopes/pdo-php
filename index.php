@@ -43,8 +43,8 @@
 			echo "<th>".$row["nome"]."</th>";
 			echo "<th>".$row["saldo"]."</th>";
 			echo "<th><a href='transeferir.php?id=".$row["id"]."'>Transferir Valor</th>";
-			echo "<th><a href='apagar-conta.php?id=".$row["id"]."'>X</th>";
-			echo "<th><a href='editar-conta.php?id=".$row["id"]."'>OK</th>";
+			echo "<th><a href='apagar-conta.php?id=".$row["id"]."'>Excluir</th>";
+			echo "<th><a href='editar-conta.php?id=".$row["id"]."'>Editar</th>";
 			echo "</tr>";
             echo "</thead>";
 		}
