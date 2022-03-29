@@ -20,3 +20,4 @@
 		}
 	}
 ?>
+<?php echo "<a href='http://localhost/pdo-php/'>Home Page</a>"; ?>

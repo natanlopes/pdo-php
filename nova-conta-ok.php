@@ -1,3 +1,5 @@
+
+
 <?php
 	if (isset($_POST["txtNome"])){
 		
@@ -14,7 +16,11 @@
 		$pstmQuery->execute();
 
 		if ($pstmQuery->rowCount() > 0){
-				echo "Conta criada com sucesso!";
+				echo "Conta criada com sucesso!"."<br>";
+				
 		}
 	}
 ?>
+
+<?php echo "<a href='http://localhost/pdo-php/'>Home Page</a>"; ?>
+

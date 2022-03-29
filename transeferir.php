@@ -36,6 +36,8 @@
       </tr>
     </thead>
     </table>
+    <?php echo "<a href='http://localhost/pdo-php/'>Home Page</a>"; ?>
+
 </div>
 </form>
 </body>

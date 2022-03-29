@@ -36,4 +36,8 @@
     </table>
 </div>
 </form>
+<div class="container">
+<a href="http://localhost/pdo-php/" button type="button" class="btnbtn btn-primary">Pagina Inicial</button>
+   
+  </div>
 </body>

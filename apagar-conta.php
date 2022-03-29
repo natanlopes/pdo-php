@@ -16,3 +16,7 @@
 		}
 	}
 ?>
+<div class="container">
+<a href="http://localhost/pdo-php/" button type="button" class="btnbtn btn-primary">Home Page</button>
+   
+  </div>
