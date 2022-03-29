@@ -10,33 +10,30 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-<form action ="transferir-ok.php" method ="POST">
+<form action ="nova-conta-ok.php" method ="POST">
 <div class="container">
-  <h2> Transeferir</h2>
+  <h2>new account</h2>
   <!--<p>Tabela de contas</p>  -->          
   <table  class="table table-dark" >
     <thead>
       <tr>
-        <th width="20%">ID Remetente:</th>
-        <th><input type="text" value="<?php echo $_GET["id"]?>" name="txtIDR"></th>
-        
-      </tr>
-        <tr>
-        <th width="20%">ID Destinatario:</th>
-        <th><input type="text" name="txtIDD"></th>
+        <th width="20%">Nome:</th>
+        <th><input type="text"  name="txtNome"></th>
         </tr>
+
         <tr>
-        <th>Valor:</th>
-        <th><input type="text" name="txtValor"></th>
+        <th>Saldo:</th>
+        <th><input type="text" name="txtSaldo"></th>
         </tr>
-        <th>
-        </th>
+
+      
+      
+        <th></th>
        
-        <th><input type="submit"value="Transferir"></th>
+        <th><input type="submit"value="Cadastar"></th>
       </tr>
     </thead>
     </table>
 </div>
 </form>
 </body>
-</html>

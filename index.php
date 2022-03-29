@@ -12,7 +12,7 @@
 <body>
 
 <div class="container">
-  <h2>CONTAS</h2>
+  <h2>Accounts</h2>
   <p></p>            
   <table class="table table-dark table-striped">
     <thead>
